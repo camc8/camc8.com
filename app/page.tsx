@@ -122,7 +122,7 @@ export default function Home() {
           <span className="font-mono text-sm text-neutral-500 tracking-tight">
             camc8.com
           </span>
-          <div className="flex gap-6 text-sm text-neutral-500">
+          <div className="flex gap-10 text-sm text-neutral-500">
             <a
               href="mailto:cameronhclark1@gmail.com"
               className="hover:text-neutral-900 transition-colors"
@@ -169,6 +169,56 @@ export default function Home() {
                 </p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Projects */}
+        <section className="mb-20">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-8">
+            Projects
+          </h2>
+          <div className="space-y-8">
+            <div className="group">
+              <a
+                href="https://supafleet.camc8.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-serif text-lg font-semibold text-neutral-900 mb-1 hover:text-neutral-600 transition-colors"
+              >
+                {/* Server/database icon */}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-400 shrink-0">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M3 5v4c0 1.657 4.03 3 9 3s9-1.343 9-3V5" />
+                  <path d="M3 9v4c0 1.657 4.03 3 9 3s9-1.343 9-3V9" />
+                  <path d="M3 13v4c0 1.657 4.03 3 9 3s9-1.343 9-3v-4" />
+                </svg>
+                Supafleet
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-400">
+                  <path d="M7 7h10v10" /><path d="M7 17 17 7" />
+                </svg>
+              </a>
+              <p className="text-sm text-neutral-500 leading-relaxed">
+                Open-source self-hosted Supabase fleet manager. Run multiple isolated Supabase instances on a single VPS with wildcard subdomains, real-time logs, and a single dashboard.
+              </p>
+              <div className="flex gap-3 mt-3">
+                <a
+                  href="https://github.com/camc8/supafleet"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-neutral-400 hover:text-neutral-700 transition-colors"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://supafleet.camc8.com/demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-neutral-400 hover:text-neutral-700 transition-colors"
+                >
+                  Live demo →
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
