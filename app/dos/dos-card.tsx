@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 
 const PHONE = '3058020002'
 const PHONE_DISPLAY = '(305) 802-0002'
-const EMAIL = 'cameron@doshealthcare.com'
+const EMAIL = 'caclark@doshealthcare.com'
 const COMPANY_1 = 'Sugarmill'
 const COMPANY_1_URL = 'https://themanorsofcitrus.com/locations/sugarmill-manor-assisted-living/'
 const COMPANY_2 = 'The Gardens'
