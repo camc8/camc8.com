@@ -8,15 +8,24 @@ export const metadata: Metadata = {
     'Cameron Hernando Clark',
     'Cameron Clark',
     'Cameron H. Clark',
+    'Cam Clark',
     'Cameron Clark Miami',
+    'Cameron Clark Miami FL',
+    'Cameron Clark Miami Florida',
     'Cameron Hernando Clark Miami',
     'Cameron Clark Florida',
     'Cameron Clark software engineer',
+    'Cameron Clark developer',
+    'Cameron Hernando Clark software engineer',
     'Cameron Clark DOS Healthcare',
+    'Cameron Clark director of marketing',
+    'Cameron Clark assisted living',
     'Cameron Clark senior care Miami',
+    'Cameron Clark memory care',
     'Cameron Clark property management Miami',
     'Cameron Clark AI',
     'camc8',
+    'camc8.com',
   ],
   authors: [{ name: 'Cameron Hernando Clark', url: 'https://camc8.com' }],
   creator: 'Cameron Hernando Clark',
@@ -43,6 +52,9 @@ export const metadata: Metadata = {
     siteName: 'Cameron Hernando Clark',
     locale: 'en_US',
     type: 'profile',
+    firstName: 'Cameron',
+    lastName: 'Clark',
+    username: 'camc8',
   },
   twitter: {
     card: 'summary_large_image',
@@ -52,38 +64,92 @@ export const metadata: Metadata = {
   },
 }
 
+const SITE_URL = 'https://camc8.com'
+const PERSON_ID = `${SITE_URL}/#person`
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Cameron Hernando Clark',
-  alternateName: ['Cameron Clark', 'Cameron H. Clark', 'Cam Clark'],
-  url: 'https://camc8.com',
-  email: 'cameronhclark1@gmail.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Miami',
-    addressRegion: 'FL',
-    addressCountry: 'US',
-  },
-  jobTitle: [
-    'Software Engineer',
-    'Director of Marketing',
-    'Community Relations Director',
-    'Property Manager',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'Cameron Hernando Clark',
+      alternateName: 'Cameron Clark',
+      description:
+        'Personal site of Cameron Hernando Clark — Miami, FL software engineer, director of marketing for assisted living, and property manager.',
+      inLanguage: 'en-US',
+      publisher: { '@id': PERSON_ID },
+      author: { '@id': PERSON_ID },
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': `${SITE_URL}/#profilepage`,
+      url: SITE_URL,
+      name: 'Cameron Hernando Clark — Miami, FL',
+      isPartOf: { '@id': `${SITE_URL}/#website` },
+      about: { '@id': PERSON_ID },
+      mainEntity: { '@id': PERSON_ID },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'Person',
+      '@id': PERSON_ID,
+      name: 'Cameron Hernando Clark',
+      givenName: 'Cameron',
+      additionalName: 'Hernando',
+      familyName: 'Clark',
+      alternateName: ['Cameron Clark', 'Cameron H. Clark', 'Cam Clark'],
+      url: SITE_URL,
+      mainEntityOfPage: SITE_URL,
+      image: `${SITE_URL}/images/cameron-clark.jpg`,
+      email: 'mailto:cameronhclark1@gmail.com',
+      description:
+        'Cameron Hernando Clark (Cameron Clark) is a Miami, Florida software engineer, director of marketing for assisted living and memory care, and property manager.',
+      jobTitle: [
+        'Software Engineer',
+        'Director of Marketing',
+        'Community Relations Director',
+        'Property Manager',
+      ],
+      worksFor: [{ '@type': 'Organization', name: 'DOS Healthcare' }],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Miami',
+        addressRegion: 'FL',
+        addressCountry: 'US',
+      },
+      homeLocation: {
+        '@type': 'Place',
+        name: 'Miami, Florida',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Miami',
+          addressRegion: 'FL',
+          addressCountry: 'US',
+        },
+      },
+      workLocation: {
+        '@type': 'Place',
+        name: 'Miami, Florida',
+      },
+      nationality: { '@type': 'Country', name: 'United States' },
+      knowsLanguage: ['English'],
+      knowsAbout: [
+        'Software Engineering',
+        'Web Development',
+        'TypeScript',
+        'React',
+        'Next.js',
+        'Assisted Living Placement',
+        'Memory Care Placement',
+        'Senior Care Marketing',
+        'Property Management',
+        'Artificial Intelligence',
+      ],
+      sameAs: ['https://github.com/camc8'],
+    },
   ],
-  worksFor: [
-    { '@type': 'Organization', name: 'DOS Healthcare' },
-  ],
-  knowsAbout: [
-    'Software Engineering',
-    'Web Development',
-    'Assisted Living Placement',
-    'Memory Care Placement',
-    'Senior Care',
-    'Property Management',
-    'Artificial Intelligence',
-  ],
-  sameAs: ['https://github.com/camc8'],
 }
 
 const roles = [
@@ -145,6 +211,46 @@ export default function Home() {
             manager. I work across industries because interesting problems
             don&apos;t stay in one lane.
           </p>
+        </section>
+
+        {/* About */}
+        <section className="mb-20">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-8">
+            About
+          </h2>
+          <div className="space-y-4 text-sm text-neutral-600 leading-relaxed max-w-xl">
+            <p>
+              Cameron Hernando Clark — usually just Cameron Clark — is based in
+              Miami, Florida, where he works as a software engineer, a director
+              of marketing in assisted living and memory care, and a property
+              manager. He builds full-stack web applications with TypeScript,
+              React, and Next.js, leads referral growth and community relations
+              for senior care placement across South Florida, and operates
+              residential and commercial property in the Miami area.
+            </p>
+            <p>
+              Whether the work is shipping software, growing a senior-living
+              referral network, or managing property, Cameron Clark moves across
+              industries because the most interesting problems rarely stay in
+              one lane. Based in Miami, FL, he can be reached at{' '}
+              <a
+                href="mailto:cameronhclark1@gmail.com"
+                className="text-neutral-900 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-900 transition-colors"
+              >
+                cameronhclark1@gmail.com
+              </a>{' '}
+              or on{' '}
+              <a
+                href="https://github.com/camc8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-900 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-900 transition-colors"
+              >
+                GitHub
+              </a>
+              .
+            </p>
+          </div>
         </section>
 
         {/* Roles */}
