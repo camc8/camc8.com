@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Cameron Hernando Clark — Miami, FL',
   description:
-    'Cameron Hernando Clark is a Miami, Florida entrepreneur and technologist — software engineer, senior care placement director at DOS Healthcare, property manager, and AI company founder.',
+    'Cameron Hernando Clark is a Miami, Florida software engineer, director of marketing for assisted living and memory care at DOS Healthcare, and property manager.',
   keywords: [
     'Cameron Hernando Clark',
     'Cameron Clark',
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cameron Hernando Clark — Miami, FL',
     description:
-      'Cameron Hernando Clark is a Miami-based software engineer, senior care placement director, property manager, and AI entrepreneur.',
+      'Cameron Hernando Clark is a Miami-based software engineer, director of marketing for assisted living and memory care, and property manager.',
     url: 'https://camc8.com',
     siteName: 'Cameron Hernando Clark',
     locale: 'en_US',
     type: 'profile',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Cameron Hernando Clark — Miami, FL',
     description:
-      'Cameron Hernando Clark is a Miami-based software engineer, senior care placement director, property manager, and AI entrepreneur.',
+      'Cameron Hernando Clark is a Miami-based software engineer, director of marketing for assisted living and memory care, and property manager.',
   },
 }
 
@@ -67,9 +67,9 @@ const jsonLd = {
   },
   jobTitle: [
     'Software Engineer',
+    'Director of Marketing',
     'Community Relations Director',
     'Property Manager',
-    'AI Entrepreneur',
   ],
   worksFor: [
     { '@type': 'Organization', name: 'DOS Healthcare' },
@@ -90,23 +90,18 @@ const roles = [
   {
     title: 'Software Engineer',
     description:
-      'Full-stack web development — React, TypeScript, Node.js, and cloud infrastructure. Building products used by real people.',
+      'Full-stack web development with TypeScript, React, and Next.js on Node.js and serverless cloud infrastructure — designing data models, building APIs, and shipping products used by real people.',
   },
-  // {
-  //   title: 'Community Relations Director',
-  //   description:
-  //     'Senior care placement specialist at DOS Healthcare in Miami, FL — helping South Florida families find assisted living and memory care.',
-  // },
+  {
+    title: 'Director of Marketing',
+    description:
+      'Director of Marketing for assisted living and memory care — driving referral growth and community relations for senior care placement across South Florida.',
+  },
   {
     title: 'Property Management',
     description:
       'Owner-operator focused on residential and commercial property management in the Miami area.',
   },
-  // {
-  //   title: 'AI Entrepreneur',
-  //   description:
-  //     'Founder of an AI company building tools that automate workflows and create new leverage for businesses.',
-  // },
 ]
 
 export default function Home() {
@@ -146,10 +141,9 @@ export default function Home() {
             Cameron<br className="sm:hidden" /> Hernando Clark
           </h1>
           <p className="text-lg text-neutral-500 leading-relaxed max-w-xl">
-            Miami, FL — software engineer,{' '}
-            {/* senior care placement director, */}
-            property manager{/* , and AI company founder */}.{' '}
-            I work across industries because interesting problems don&apos;t stay in one lane.
+            Miami, FL — software engineer, director of marketing, and property
+            manager. I work across industries because interesting problems
+            don&apos;t stay in one lane.
           </p>
         </section>
 
